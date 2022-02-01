@@ -1,0 +1,15 @@
+.success {
+  @apply text-green-100 bg-green-500 border-green-300;
+}
+
+.error {
+  @apply text-red-100 bg-red-500 border-red-300;
+}
+
+.info {
+  @apply text-pink-100 bg-pink-500 border-pink-300;
+}
+
+.busy {
+  @apply text-blue-100 bg-blue-500 border-blue-300;
+}

@@ -1,0 +1,104 @@
+button.outline {
+  @apply bg-black-900;
+  @apply rounded border-transparent bg-gradient-to-r;
+  @apply p-px inline-flex whitespace-nowrap;
+  @apply bg-gradient-to-b from-blue-400 to-blue-700;
+}
+
+button.outline:enabled {
+  @apply hover:shadow-md hover:from-blue-600 hover:to-blue-500;
+}
+
+button.outline .inner {
+  @apply bg-black-900;
+  @apply cursor-pointer;
+  @apply rounded-md;
+  @apply px-6;
+  @apply leading-10 tracking-wide font-bold text-blue-300;
+}
+
+button.outline .inner:enabled {
+  @apply hover:bg-transparent hover:text-white;
+}
+
+button.primary {
+  @apply bg-black-900;
+  @apply rounded border-transparent bg-gradient-to-r;
+  @apply p-px inline-flex whitespace-nowrap;
+  @apply bg-gradient-to-b from-green-400 to-green-700;
+}
+
+button.primary:enabled {
+  @apply hover:shadow-md hover:from-green-600 hover:to-green-500;
+}
+
+button.primary .inner {
+  @apply bg-black-900;
+  @apply cursor-pointer;
+  @apply rounded-md;
+  @apply px-6;
+  @apply leading-10 tracking-wide font-bold text-green-300;
+}
+
+button.primary .inner:enabled {
+  @apply hover:bg-transparent hover:text-white;
+}
+
+button.secondary {
+  @apply bg-black-900;
+  @apply rounded border-transparent bg-gradient-to-r;
+  @apply p-px inline-flex whitespace-nowrap;
+  @apply bg-gradient-to-b from-pink-400 to-pink-700;
+}
+
+button.secondary:enabled {
+  @apply hover:shadow-md hover:from-pink-600 hover:to-pink-500;
+}
+
+button.secondary .inner {
+  @apply bg-black-900;
+  @apply cursor-pointer;
+  @apply rounded-md;
+  @apply px-6;
+  @apply leading-10 tracking-wide font-bold text-pink-300;
+}
+
+button.primary .inner:enabled {
+  @apply hover:bg-transparent hover:text-white;
+}
+
+button.link {
+  @apply bg-transparent opacity-80;
+  @apply p-px inline-flex whitespace-nowrap;
+  @apply hover:shadow-md;
+}
+
+button.link .inner {
+  @apply bg-transparent;
+  @apply cursor-pointer;
+  @apply py-1 px-8;
+  @apply leading-10 tracking-wide font-bold text-white;
+}
+
+button.tx {
+  @apply bg-black-900;
+  @apply rounded border-transparent bg-gradient-to-r;
+  @apply p-px inline-flex whitespace-nowrap;
+  @apply bg-gradient-to-b from-blue-400 to-blue-700;
+}
+
+button.tx:enabled {
+  @apply hover:shadow-md hover:from-blue-600 hover:to-blue-500;
+}
+
+button.tx .inner {
+  @apply bg-black-900;
+  @apply cursor-pointer;
+  @apply px-8 py-2;
+
+  @apply leading-10 tracking-wide font-bold text-blue-300;
+}
+
+button.tx .inner:enabled {
+  @apply hover:bg-transparent hover:text-white;
+}

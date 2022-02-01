@@ -1,0 +1,18 @@
+{
+  "startAt": 1642368048922,
+  "endAt": 1642432886000,
+  "owner": "0xdefCc1E3Bb41087D9AD4932608F6277aD3eDa533",
+  "ticketPrice": 300000000000000,
+  "minPlayers": 10,
+  "maxPlayers": 100,
+  "serviceFeePercent": 2,
+  "platformFeePercent": 2,
+  "tickets": [
+    "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+  ]
+}

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Heading";
+  font-style: normal;
+  src: url("/fonts/sequel.woff") format("woff");
+}
+
+/* average-sans-regular - latin */
+@font-face {
+  font-family: "Button";
+  font-style: normal;
+  src: url("/fonts/lato-v20-latin-regular.woff2") format("woff2");
+}
+/* lato-300 - latin */
+@font-face {
+  font-family: "Body";
+  font-style: normal;
+  src: url("/fonts/average-sans-v14-latin-regular.woff2") format("woff2");
+}

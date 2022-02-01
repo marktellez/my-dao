@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply antialiased;
+}
+
+body {
+  @apply text-white text-lg;
+  @apply bg-black-700;
+}
+
+h1 {
+  @apply font-heading;
+  @apply mt-4 mb-12;
+  @apply tracking-wider;
+  @apply text-5xl;
+
+  @apply uppercase;
+}
+
+h2 {
+  @apply font-body;
+  @apply my-4;
+  @apply tracking-wider;
+  @apply font-bold;
+}
+
+p {
+  @apply font-body;
+  @apply text-lg my-4 tracking-wide;
+}
+
+a {
+  @apply font-body;
+  @apply text-pink-600 border-b border-pink-600;
+  @apply text-sm my-4 tracking-wide;
+}
+
+button {
+  @apply font-button;
+}
+
+button.block {
+  @apply w-full;
+}
