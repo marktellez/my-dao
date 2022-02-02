@@ -25,7 +25,7 @@ export default function TxWindow({
   onBusyChanged = () => {},
   renderButtonText = () => {},
 }) {
-  const [busy, _setBusy] = useState(false);
+  const [busy, _setBusy] = useState(busy);
   const [error, setError] = useState(undefined);
   const [status, setStatus] = useState(undefined);
   const [timer, setTimer] = useState(undefined);

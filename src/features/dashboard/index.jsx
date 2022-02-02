@@ -46,7 +46,7 @@ export default function Dashboard({}) {
     <Paper className="w-full">
       <h1>Dashboard</h1>
 
-      <div className="border border-white p-8">
+      <div className="mb-12">
         <h2>DAO Stats</h2>
 
         <div>Circulating Supply: {toEth(circulatingSupply)}</div>
@@ -54,10 +54,12 @@ export default function Dashboard({}) {
       </div>
 
       <div className="flex space-x-8 w-full my-8">
-        <PrimaryButton block onClick={() => router.push("/token/approve")}>
+        <PrimaryButton block onClick={() => router.push("/token/buy")}>
           Buy {process.env.NEXT_PUBLIC_TOKEN_SYMBOL} tokens
         </PrimaryButton>
-        <SecondaryButton block>Get Started</SecondaryButton>
+        <SecondaryButton block onClick={() => router.push("/token/stake")}>
+          Stake your tokens
+        </SecondaryButton>
       </div>
     </Paper>
   );
