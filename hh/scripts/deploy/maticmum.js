@@ -6,6 +6,12 @@ async function main() {
   const chainId = "0x13881";
   const env = web3Config[chainId];
 
+  env.dai = {
+    address: "0xcb1e72786a6eb3b44c2a2429e317c8a2462cfeb1",
+    symbol: "DAI",
+    name: "DAI",
+  };
+
   const OPERATOR_ROLE =
     "0x97667070c54ef182b0f5858b034beac1b6f3089aa2d3188bb1e8929f4fa9b929";
 
@@ -27,9 +33,9 @@ async function main() {
     `Deployed DaoToken (${daoToken.address}) with deployer (${deployer.address}) is operator: ${isOperator}`
   );
 
-  console.log("Deploying DaiMock...");
-  const DaiMock = await ethers.getContractFactory("DaiMock");
-  const daiToken = await (await DaiMock.connect(deployer).deploy()).deployed();
+  // console.log("Deploying DaiMock...");
+  // const DaiMock = await ethers.getContractFactory("DaiMock");
+  // const daiToken = await (await DaiMock.connect(deployer).deploy()).deployed();
 
   console.log("Deploying Staking...");
   const Staking = await ethers.getContractFactory("DaoStaking");
@@ -40,15 +46,9 @@ async function main() {
   console.log("Deploying Market...");
   const Market = await ethers.getContractFactory("Market");
   const market = await (
-    await Market.connect(deployer).deploy(daoToken.address, daiToken.address)
+    await Market.connect(deployer).deploy(daoToken.address, env.dai.address)
   ).deployed();
   await daoToken.connect(deployer).connectToMarket(market.address);
-
-  env.dai = {
-    address: daiToken.address,
-    symbol: "DAI",
-    name: "DAI",
-  };
 
   env.dao = {
     address: daoToken.address,
@@ -78,7 +78,7 @@ async function main() {
 ------------------------------------------------------------
 CONTRACTS DEPLOYED:
   DaoToken: ${daoToken.address}
-  DaiMock: ${daiToken.address}
+  Dai: ${env.dai.address}
   Market: ${market.address}
   Staking: ${staking.address}
 ------------------------------------------------------------

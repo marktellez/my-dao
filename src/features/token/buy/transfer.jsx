@@ -30,9 +30,7 @@ export default function SwapTokens({}) {
   }
 
   async function handleTx() {
-    return await contract
-      .connect(provider.getSigner())
-      .swapStableForToken(amount);
+    return await contract.connect(provider.getSigner()).swapERCForDao(amount);
   }
 
   return (
