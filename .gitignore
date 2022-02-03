@@ -3,3 +3,4 @@ node_modules
 .en*
 hh/artifacts
 hh/cache
+package-lock.json
