@@ -10,6 +10,7 @@ export default function EthAmountField({
     <DecimalField
       label={label}
       value={value}
+      autoWidth
       onChange={(val) => onChange(val)}
       {...rest}
     />

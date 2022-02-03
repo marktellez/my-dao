@@ -9,6 +9,10 @@ module.exports = {
   important: true,
   theme: {
     extend: {
+      borderRadius: {
+        "4xl": "32px",
+        "5xl": "48px",
+      },
       fontFamily: {
         heading: ["Heading"],
         body: ["Body"],

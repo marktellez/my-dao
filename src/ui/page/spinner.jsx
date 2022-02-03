@@ -1,8 +1,8 @@
-export default function Spinner({}) {
+export default function Spinner({ className = "" }) {
   return (
     <svg
       role="status"
-      className="mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+      className={`mr-2  text-gray-200 animate-spin dark:text-white fill-blue-600 ${className}`}
       viewBox="0 0 100 101"
       fill="none">
       <path

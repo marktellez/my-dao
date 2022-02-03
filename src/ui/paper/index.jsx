@@ -1,7 +1,9 @@
 export default function Paper({ children, className }) {
   return (
     <div
-      className={`w-1/2 bg-black-500 border-2 border-black-700 py-6 px-10 rounded-sm shadow-md ${className}`}>
+      className={`mx-auto bg-black-800 py-8 px-16 rounded-4xl my-8 shadow-md ${
+        className ? className : "w-full md:w-[700px]"
+      }`}>
       {children}
     </div>
   );

@@ -4,7 +4,11 @@ import Header from "./header";
 import Footer from "./footer";
 
 export default function Layout({ children }) {
-  const fonts = ["/fonts/lato-v20-latin-regular.woff2", "/fonts/sequel.woff"];
+  const fonts = [
+    "/fonts/Inter-Light.woff2",
+    "/fonts/Inter-Medium.woff2",
+    "/fonts/sequel.woff",
+  ];
   return (
     <>
       <Head>

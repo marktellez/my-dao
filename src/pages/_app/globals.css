@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
 body {
   @apply text-white text-lg;
   @apply bg-black-700;
   @apply antialiased;
-  @apply font-button;
+  @apply font-body;
 }
 
 h1 {
@@ -17,11 +14,11 @@ h1 {
   @apply mt-4 mb-12;
   @apply tracking-wider;
   @apply text-5xl;
-
   @apply uppercase;
 }
 
 h2 {
+  @apply font-heading;
   @apply my-4;
   @apply font-body;
   @apply tracking-wider;
@@ -33,9 +30,8 @@ p {
 }
 
 a {
-  @apply font-body text-pink-600;
+  @apply text-pink-600;
   @apply underline;
-  @apply text-sm my-4 tracking-wider;
 }
 
 button {

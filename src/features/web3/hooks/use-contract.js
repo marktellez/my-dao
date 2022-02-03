@@ -6,6 +6,7 @@ export default function useContract({ address, abi, providerOrSigner }) {
 
   useEffect(() => {
     if (!providerOrSigner || !address) return;
+
     const contract = new ethers.Contract(address, abi, providerOrSigner);
 
     setContract(contract);

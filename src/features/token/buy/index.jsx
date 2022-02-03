@@ -1,14 +1,38 @@
+import { useRouter } from "next/router";
+
 import ApproveTxWindow from "@/ui/tx-window/approve";
 
-export default function BuyTokens({ contract, provider, onApproved }) {
+import useWeb3 from "@/features/web3/hooks/use-web3";
+import useContract from "@/features/web3/hooks/use-contract";
+
+const daiAbi = require("@/contracts/DaiMock.sol/abi.json");
+
+export default function BuyTokens({}) {
+  const { provider, chainId } = useWeb3();
+  const contracts = require("@/data/contracts.json")[chainId];
+
+  const router = useRouter();
+
+  const spender = contracts.market.address;
+
+  const daiContract = useContract({
+    address: contracts.dai.address,
+    abi: daiAbi.abi,
+    providerOrSigner: provider,
+  });
+
+  function onApproved(owner, spender, amount, event) {
+    router.push(`/token/buy/${amount}`);
+  }
+
   return (
     <ApproveTxWindow
-      contract={contract}
-      spender={process.env.NEXT_PUBLIC_MARKET_CONTRACT_ADDRESS}
+      contract={daiContract}
+      spender={spender}
       provider={provider}
-      tokenSymbol={process.env.NEXT_PUBLIC_STABLE_SYMBOL}
+      tokenSymbol={contracts.dai.symbol}
       renderButtonText={() => <span>Approve</span>}
-      onConfirmation={(owner, spender, amount, event) => onApproved(amount)}
+      onConfirmation={(...rest) => onApproved(...rest)}
     />
   );
 }

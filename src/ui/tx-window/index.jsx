@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
+import useStateRef from "@/hooks/use-state-ref";
+
 import TxButton from "@/ui/buttons/tx";
 import Notice from "@/ui/notices";
-
-import useWeb3 from "@/features/web3/hooks/use-web3";
 
 const NONE = undefined;
 const SIGNING = "SIGNING";
@@ -29,8 +29,7 @@ export default function TxWindow({
   const [error, setError] = useState(undefined);
   const [status, setStatus] = useState(undefined);
   const [timer, setTimer] = useState(undefined);
-
-  const { address } = useWeb3();
+  const [lastHash, setLastHash, ref] = useStateRef(undefined);
 
   useEffect(() => {
     if (!contract) return;
@@ -50,9 +49,11 @@ export default function TxWindow({
   }
 
   async function handleConfirmationEvent(...rest) {
-    setStatus(CONFIRMED);
-    onConfirmation(...rest);
+    const event = rest[rest.length - 1];
 
+    if (event.transactionHash !== ref.current) return;
+
+    onConfirmation(...rest);
     setTimer(
       setTimeout(() => {
         reset();
@@ -65,7 +66,9 @@ export default function TxWindow({
     setStatus(SIGNING);
 
     try {
-      await txHandler();
+      const tx = await txHandler();
+
+      setLastHash(tx.hash);
 
       setStatus(CONFIRMING);
     } catch (e) {
@@ -93,14 +96,14 @@ export default function TxWindow({
 
   return (
     <>
-      <div className="border border-black-500 w-full">
+      <div>
         <TxButton block busy={busy || disabled} onClick={handleTx}>
           {renderButtonText() || "Continue"}
         </TxButton>
       </div>
 
       {status && (
-        <div className="border border-black-500 w-full text-center">
+        <div className="text-center">
           {status === SIGNING && (
             <Notice type="busy">{signingText || "Opening Metamask..."}</Notice>
           )}

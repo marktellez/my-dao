@@ -1,20 +1,23 @@
 import ContractLink from "./";
 
+import { DocumentTextIcon, ExternalLinkIcon } from "@heroicons/react/outline";
+
 export default function ContractLinkText({ address }) {
   return (
-    <div className="border border-black-500 p-3 ">
-      <div className="flex items-center space-x-2">
+    <div className="flex items-center justify-around">
+      <div className="flex-grow flex items-center space-x-2">
         <div>
-          <img
-            src="/images/icons/contract.png"
-            alt="contract icon"
-            width={48}
-          />
+          <DocumentTextIcon className="h-4 w-4" />
         </div>
         <div>
           <ContractLink {...{ address }} />
-          <div className="text-xs">View the contract</div>
         </div>
+      </div>
+      <div className="flex items-center space-x-2 mx-4">
+        <div>
+          <ExternalLinkIcon className="h-4 w-4" />
+        </div>
+        <div>View on block explorer</div>
       </div>
     </div>
   );
