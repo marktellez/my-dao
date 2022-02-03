@@ -2,9 +2,9 @@ const { mkdir, rm, link } = require("fs/promises");
 const path = require("path");
 
 async function main() {
-  await linkToWeb3("RewardToken");
+  await linkToWeb3("DaoToken");
   await linkToWeb3("DaiMock");
-  await linkToWeb3("RewardTokenStaking");
+  await linkToWeb3("DaoStaking");
   await linkToWeb3("Market");
 
   async function linkToWeb3(filename) {

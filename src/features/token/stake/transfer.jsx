@@ -10,7 +10,7 @@ import useContract from "@/features/web3/hooks/use-contract";
 
 import { toEth } from "@/modules/units";
 
-const stakingAbi = require("@/contracts/RewardTokenStaking.sol/abi.json");
+const stakingAbi = require("@/contracts/DaoStaking.sol/abi.json");
 
 export default function TransferStakedTokens({}) {
   const { provider, chainId } = useWeb3();

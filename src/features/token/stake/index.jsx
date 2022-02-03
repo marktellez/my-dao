@@ -5,7 +5,7 @@ import ApproveTxWindow from "@/ui/tx-window/approve";
 import useWeb3 from "@/features/web3/hooks/use-web3";
 import useContract from "@/features/web3/hooks/use-contract";
 
-const daoAbi = require("@/contracts/RewardToken.sol/abi.json");
+const daoAbi = require("@/contracts/DaoToken.sol/abi.json");
 
 export default function StakeTokens({}) {
   const { provider, chainId } = useWeb3();

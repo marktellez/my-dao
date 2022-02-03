@@ -1,5 +1,5 @@
 import SecurePage from "@/ui/page/secure";
-import BuyRewardToken from "@/features/token/buy/transfer";
+import BuyDaoToken from "@/features/token/buy/transfer";
 
 import Paper from "@/ui/paper";
 import Stepper from "@/ui/stepper";
@@ -17,7 +17,7 @@ export default function BuyPage({}) {
         index={1}
       />
       <Paper>
-        <BuyRewardToken />
+        <BuyDaoToken />
       </Paper>
     </SecurePage>
   );

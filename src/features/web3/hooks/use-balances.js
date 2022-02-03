@@ -5,8 +5,8 @@ import useWeb3 from "@/features/web3/hooks/use-web3";
 import { BigNumber } from "ethers";
 
 const daiAbi = require("@/contracts/DaiMock.sol/abi.json");
-const daoAbi = require("@/contracts/RewardToken.sol/abi.json");
-const stakingAbi = require("@/contracts/RewardTokenStaking.sol/abi.json");
+const daoAbi = require("@/contracts/DaoToken.sol/abi.json");
+const stakingAbi = require("@/contracts/DaoStaking.sol/abi.json");
 const marketAbi = require("@/contracts/Market.sol/abi.json");
 
 export default function useBalances() {

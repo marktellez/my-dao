@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "RewardTokenStaking",
-  "sourceName": "contracts/RewardTokenStaking.sol",
+  "contractName": "DaoStaking",
+  "sourceName": "contracts/DaoStaking.sol",
   "abi": [
     {
       "inputs": [
