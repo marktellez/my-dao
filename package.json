@@ -31,7 +31,6 @@
     "dotenv": "^15.0.0",
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
-    "ethereum-waffle": "^3.4.0",
     "hardhat": "^2.8.3",
     "postcss": "^8.3.5",
     "tailwindcss": "^3.0.16"

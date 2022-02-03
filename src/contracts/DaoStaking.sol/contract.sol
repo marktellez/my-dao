@@ -4,8 +4,8 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract RewardTokenStaking {
-    IERC20 private _rewardsToken;
+contract DaoStaking {
+    IERC20 private _daoToken;
 
     uint256 private _rewardRate = 100;
     uint256 private _lastUpdateTime;
@@ -20,8 +20,8 @@ contract RewardTokenStaking {
     event Withdraw(address who, uint256 amount);
     event Compound(address who, uint256 amount);
 
-    constructor(address rewardsToken) {
-        _rewardsToken = IERC20(rewardsToken);
+    constructor(address daoToken) {
+        _daoToken = IERC20(daoToken);
     }
 
     modifier updateReward(address account) {
@@ -36,7 +36,7 @@ contract RewardTokenStaking {
     function stake(uint256 amount) external updateReward(msg.sender) {
         _totalStaked += amount;
         _balances[msg.sender] += amount;
-        _rewardsToken.transferFrom(msg.sender, address(this), amount);
+        _daoToken.transferFrom(msg.sender, address(this), amount);
 
         emit Stake(msg.sender, amount);
     }
@@ -44,7 +44,7 @@ contract RewardTokenStaking {
     function withdraw(uint256 amount) external updateReward(msg.sender) {
         _totalStaked -= amount;
         _balances[msg.sender] -= amount;
-        _rewardsToken.transfer(msg.sender, amount);
+        _daoToken.transfer(msg.sender, amount);
 
         emit Withdraw(msg.sender, amount);
     }

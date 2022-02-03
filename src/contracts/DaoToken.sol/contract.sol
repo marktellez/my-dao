@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 
-contract RewardToken is ERC20, AccessControl, ERC20Burnable {
+contract DaoToken is ERC20, AccessControl, ERC20Burnable {
     bytes32 public constant OPERATOR_ROLE = keccak256("OPERATOR_ROLE");
     bytes32 public constant MARKET_ROLE = keccak256("MARKET_ROLE");
 

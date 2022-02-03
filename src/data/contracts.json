@@ -13,32 +13,24 @@
       "symbol": "TZD",
       "name": "TelezDao"
     },
-    "staking": {
-      "address": "0x686D90bCF00642118cAa866a3A1eEB5b1fa9Ec03"
-    },
-    "market": {
-      "address": "0xA8e07717E89cb558524B0fEC87a54285D2Ca1357"
-    }
+    "staking": { "address": "0x686D90bCF00642118cAa866a3A1eEB5b1fa9Ec03" },
+    "market": { "address": "0xA8e07717E89cb558524B0fEC87a54285D2Ca1357" }
   },
   "0x13881": {
     "hex": "0x13881",
     "chainId": 80001,
     "name": "maticmum",
     "dao": {
-      "address": "0x404763C297b9fB74C2622A8484a58a9Fc48ec231",
+      "address": "0xbC812192a5d7cDcB69A90CBAF29900057a33C87c",
       "symbol": "TZD",
       "name": "TelezDao"
     },
     "dai": {
-      "address": "0xcb1e72786a6eb3b44c2a2429e317c8a2462cfeb1",
+      "address": "0x0792A5FbA32F92558B15Beafc147094757D2243a",
       "symbol": "DAI",
       "name": "DAI"
     },
-    "staking": {
-      "address": "0x5066C227241e8de9C480e024834E697d74EDbAfe"
-    },
-    "market": {
-      "address": "0x30f7d60643C18c850833e736c0D6731F7C535909"
-    }
+    "staking": { "address": "0xa4EeccbB0bB55B8f0eB7b68BFe2dD36039d0c492" },
+    "market": { "address": "0xBDE97909047096244db89416C0bfA0522821DC13" }
   }
 }
